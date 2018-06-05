@@ -15,24 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-$html = <<<EOF
-<html>
-<head>
-<title>Hello</title>
-<style>
-body { font-size: 16px; color: #999;}
-h1 { font-size: 100px; text-align:right; color: #eee;
-    margin: -40px 0px -50px 0px; }
-</style>
-</head>
-<body>
-    <h1>hello</h1>
-    <p> This is sample page.</p>
-    <p>これはサンプルページです。</p>
-</body>
-</html>
-EOF;
-
-Route::get('hello',function() use ($html){
-    return $html;
+Route::get('hello',function(){
+    return '<html><body><h1>Hello</h1><p>This is sample page.</p></body></html>';
 });

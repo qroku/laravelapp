@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 
 
-Route::get('hello/{msg}',function($msg){
+Route::get('hello/{msg?}',function($msg = 'no message.'){
 
 $html = <<<EOF
 <html>

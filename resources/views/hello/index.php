@@ -9,6 +9,7 @@ h1 { font-size:100pt; text-align:right; color:#f6f6f6;
 </head>
 <body>
     <h1>Index</h1>
-    <p>This is sample page with php-template.</p>
+    <p><?php echo $msg; ?></p>
+    <p>ID=<?php echo $id; ?></p>
 </body>
 </html>

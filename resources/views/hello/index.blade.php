@@ -1,25 +1,19 @@
-<html>
-<head>
-<title>Hello</title>
-<style>
-body { font-size:16pt; color:#999; }
-h1 { font-size:50pt; text-align:right; color:#f6f6f6;
-    margin:-20px 0px 0px 0px; }
-</style>
-</head>
-<body>
-    <h1>Blade/Index</h1>
-    <p>&#064;whileディレクティブの例</p>
-    <ol>
-    @php
-    $counter = 0;
-    @endphp
-    @while ($counter < count($data))
-    <li>{{$data[$counter]}}</li>
-    @php
-    $counter++;
-    @endphp
-    @endwhile
-    </ol>
-</body>
-</html>
+@extends('layouts.helloapp')
+
+@section('title','index')
+
+@section('menubar')
+    @parent
+    インデックスページ
+@endsection
+
+@section('content')
+    <p>ここが本文のコンテンツです。</p>
+    <p>Controller value<br>'message' = {{$message}}</p>
+    <p>ViewComposer value<br>'view_message' = {{$view_message}}</p>
+
+@endsection
+
+@section('footer')
+copyright 2007 tuyano.
+@endsection

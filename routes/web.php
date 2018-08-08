@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Middleware\Hellomiddleware;
+// use App\Http\Middleware\Hellomiddleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,5 +18,4 @@ Route::get('/', function () {
 });
 
 
-Route::get('hello','helloController@index')
-    ->middleware(HelloMiddleware::class);
+Route::get('hello','helloController@index');

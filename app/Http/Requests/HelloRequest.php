@@ -4,6 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+
 class HelloRequest extends FormRequest
 {
     /**
@@ -31,7 +32,7 @@ class HelloRequest extends FormRequest
         return [
             'name' => 'required',
             'mail' => 'email',
-            'age' => 'numeric|between:0,150',
+            'age' => 'numeric|hello',
         ];
     }
 
@@ -41,6 +42,7 @@ class HelloRequest extends FormRequest
             'name.required' => '名前は必ず入力してください。',
             'mail.email' => 'メールアドレスが必要です。',
             'age.between' => '年齢は0~150の間で入力してください。',
+            'age.hello' => 'hello! 入力は偶数のみ受け付けます。',
         ];
     }
 }
